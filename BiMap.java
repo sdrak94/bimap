@@ -42,7 +42,7 @@ public class BiMap<K, VK, V> implements Map<K, Map<VK, V>>
 	public V get(K key1, VK key2)
 	{
 		final var map1 = _mapImpl.get(key1);
-		if (key1 == null)
+		if (map1 == null)
 			return null;
 		return map1.get(key2);
 	}
